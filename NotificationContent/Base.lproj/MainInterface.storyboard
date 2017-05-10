@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="M4Y-Lb-cyx">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Notification View Controller-->
+        <scene sceneID="cwh-vc-ff4">
+            <objects>
+                <viewController id="M4Y-Lb-cyx" userLabel="Notification View Controller" customClass="NotificationViewController" customModule="NotificationContent" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ft6-oW-KC0"/>
+                        <viewControllerLayoutGuide type="bottom" id="FKl-LY-JtV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" simulatedAppContext="notificationCenter" id="2cV-Aa-1DX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="220"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="C7K-Mg-MYa">
+                                <rect key="frame" x="0.0" y="0.0" width="160" height="160"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="160" id="Mzj-NL-LGr"/>
+                                    <constraint firstAttribute="width" secondItem="C7K-Mg-MYa" secondAttribute="height" multiplier="1:1" id="d3H-bC-TCh"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGq-DY-yZI">
+                                <rect key="frame" x="16" y="178.5" width="288" height="21.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="i17-5G-xTg">
+                                <rect key="frame" x="168" y="0.0" width="144" height="160"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="160" id="PJl-oh-avL"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="i17-5G-xTg" secondAttribute="trailing" constant="8" id="2Se-zm-52f"/>
+                            <constraint firstItem="i17-5G-xTg" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="5mt-gb-CoY"/>
+                            <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="nGq-DY-yZI" secondAttribute="bottom" constant="20" id="OZK-Oe-CMc"/>
+                            <constraint firstItem="i17-5G-xTg" firstAttribute="leading" secondItem="C7K-Mg-MYa" secondAttribute="trailing" constant="8" id="Rba-VC-Baq"/>
+                            <constraint firstItem="C7K-Mg-MYa" firstAttribute="leading" secondItem="2cV-Aa-1DX" secondAttribute="leading" id="XZr-kq-vjc"/>
+                            <constraint firstItem="nGq-DY-yZI" firstAttribute="leading" secondItem="2cV-Aa-1DX" secondAttribute="leadingMargin" id="t0k-5U-HUA"/>
+                            <constraint firstItem="C7K-Mg-MYa" firstAttribute="top" secondItem="Ft6-oW-KC0" secondAttribute="bottom" id="tiV-We-lGG"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nGq-DY-yZI" secondAttribute="trailing" id="w2D-Ed-xkK"/>
+                        </constraints>
+                    </view>
+                    <extendedEdge key="edgesForExtendedLayout"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="320" height="220"/>
+                    <connections>
+                        <outlet property="imageView" destination="C7K-Mg-MYa" id="Em4-QG-5Vj"/>
+                        <outlet property="textView" destination="i17-5G-xTg" id="J19-Bq-9oO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vXp-U4-Rya" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-509" y="26"/>
+        </scene>
+    </scenes>
+</document>
