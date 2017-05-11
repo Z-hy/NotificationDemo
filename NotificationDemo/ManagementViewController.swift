@@ -46,7 +46,7 @@ class ManagementViewController: UIViewController {
                 print("Notification request added: \(identifier)")
             }
         }
-        delay(2) {
+        delay(5) {
             print("Notification request removed: \(identifier)")
             UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: [identifier])
         }
@@ -63,7 +63,7 @@ class ManagementViewController: UIViewController {
                 print("Notification request added: \(identifier) with title1")
             }
         }
-        delay(2) {
+        delay(5) {
             let newTrigger = UNTimeIntervalNotificationTrigger(timeInterval: 1, repeats: false)
             // Add new request with the same identifier to update a notification.
             let newRequest = UNNotificationRequest(identifier: identifier, content: self.title2Content, trigger: newTrigger)

@@ -37,26 +37,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
         UserDefaults.standard.set("", forKey: PushTokenKey)
     }
-
-    func createPushContent() {
-        //1. 创建通知内容
-        let content = UNMutableNotificationContent()
-        content.title = "Time Interval Notificaiton"
-        content.body = "My first notification"
-        content.userInfo = ["name": "zhy"]
-        //2. 创建发送触发
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
-        //3. 发送请求标识符
-        let requestIdentifier = "com.zhy.usernotification,myFirstNotification"
-        //4. 创建一个发送请求
-        let request = UNNotificationRequest(identifier: requestIdentifier, content: content, trigger: trigger)
-        //5. 将请求添加到发送中心
-        UNUserNotificationCenter.current().add(request) { (error) in
-            if error == nil {
-                print("Time Interval Notification scheduled: \(requestIdentifier)")
-            }
-        }
-    }
     
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
